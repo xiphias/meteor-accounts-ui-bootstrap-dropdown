@@ -2,10 +2,11 @@
 <!-- LOGGED IN -->
 <!--           -->
 <template name="_loginButtonsLoggedInDropdown">
-  <div class="dropdown">
-    <ul class="nav pull-right">
-      <li id="login-dropdown-list">
-        <a class="dropdown-toggle" href="#" data-toggle="dropdown">{{displayName}}<strong class="caret"></strong></a>
+  <div>
+    <ul class="nav full pull-right">
+      <li class="dropdown user-avatar" id="login-dropdown-list">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        <span>{{displayName}}<i class="icon-caret-down"></i></span></a>
         <div class="dropdown-menu" style="padding: 20px; padding-bottom: 20px;">   
           {{#if inMessageOnlyFlow}}
             {{> _loginButtonsMessages}}
@@ -23,7 +24,9 @@
 </template>
 
 <template name="_loginButtonsLoggedInDropdownActions">
-  <button class="btn btn-block btn-primary" id="login-buttons-logout">Sign out</button>
+  <button class="btn btn-block btn-primary" id="login-buttons-logout">
+  <i class="icon-off"></i>Sign out</button>
+
   {{#if allowChangingPassword}}
     <button class="btn btn-block" id="login-buttons-open-change-password">Change password</button>
   {{/if}}
